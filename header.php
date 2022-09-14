@@ -17,7 +17,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="Thiago L C de Oliveira">
-  <title>Lista de Espera</title>
+  <title>Lista de Transaferência</title>
   <!-- Site Properties -->
  
   <link rel="stylesheet" type="text/css" href="semantiu/semantic.min.css">
@@ -202,7 +202,7 @@ session_start();
 
     <div class="ui text container ">
       <h1 class="ui inverted header sem-top">
-        Lista de Espera
+        Lista de Transferência
       </h1>
       <h2 class="ui text-banner " ></h2>
       <a href="/register.php" class="ui huge  button">Cadastre sua criança<i class="right arrow icon"></i></a>
