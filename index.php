@@ -105,6 +105,7 @@ $(document).ready(function() {
 			'colvis'
     ],
 	"pageLength" : 50,
+	"order": [[ 0, 'desc' ]]
 });
 table.buttons().container()
         .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
