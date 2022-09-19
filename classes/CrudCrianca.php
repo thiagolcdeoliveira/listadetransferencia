@@ -142,11 +142,12 @@ class CrudCrianca {
 	public function listAtivos(){
 		$sql = "SELECT * FROM `crianca` ";
 		$sql = "select *, CASE turma
-		WHEN '0'     THEN     'Berçário 1'
+		WHEN '5'     THEN     'Berçário 1'
 		WHEN '1'     THEN     'Berçário 2'
 		WHEN '2'     THEN     'Maternal'
 		WHEN '3'     THEN     'Jardim'
 		WHEN '4'     THEN     'Pré 1'
+		WHEN '0'     THEN     'Berçário 1'
 		ELSE 'erro' END as turma
         from crianca where ativo = 1 order by id";
 		$stmt = $this->banco->prepare($sql);
