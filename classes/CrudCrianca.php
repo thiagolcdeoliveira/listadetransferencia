@@ -19,11 +19,11 @@ class CrudCrianca {
 	public function save(){
 		if (!empty($this->crianca->getDataCad())){
 			
-		$sql = "INSERT INTO `crianca` (`nome`, `sobrenome`,`codigo`,`telefone`,`email`, `data_cad`, `data_nasc`, `cpf`,`nome_responsavel`, `turma`, `periodo`, `cei` ) VALUES (:nome,:sobrenome,:codigo,:telefone,
+		$sql = "INSERT INTO `crianca` (`nome`, `sobrenome`,`codigo`,`telefone`,`endereco`, `data_cad`, `data_nasc`, `cpf`,`nome_responsavel`, `turma`, `periodo`, `cei` ) VALUES (:nome,:sobrenome,:codigo,:telefone,
 		:email,:data_cad,:data_nasc,:cpf,:nome_responsavel,:turma, :periodo,:cei)";
 
 		}else{
-		$sql = "INSERT INTO `crianca` (`nome`, `sobrenome`,`codigo`,`telefone`,`email`,  `data_nasc`,`data_cad`, `cpf`,`nome_responsavel`, `turma`, `periodo`, `cei` ) VALUES (:nome,:sobrenome,:codigo,:telefone,
+		$sql = "INSERT INTO `crianca` (`nome`, `sobrenome`,`codigo`,`telefone`,`endereco`,  `data_nasc`,`data_cad`, `cpf`,`nome_responsavel`, `turma`, `periodo`, `cei` ) VALUES (:nome,:sobrenome,:codigo,:telefone,
 		:email,:data_nasc, now() ,:cpf,:nome_responsavel,:turma, :periodo,:cei)";
 		}
 		$stmt = $this->banco->prepare($sql);
@@ -131,7 +131,7 @@ class CrudCrianca {
 		foreach ( $stmt->fetchAll(PDO::FETCH_ASSOC) as $value){
 			$crianca = new Crianca();
 			$crianca->setId($value["id"])->setNome($value["nome"])->setSobrenome($value["sobrenome"])->setTurma($value["turma"])->
-			setCei(unserialize($value["cei"]))->setCpf($value["cpf"])->setDataNasc($value["data_nasc"])->setEmail($value["email"])->
+			setCei(unserialize($value["cei"]))->setCpf($value["cpf"])->setDataNasc($value["data_nasc"])->setEmail($value["endereco"])->
 			setNomeResponsavel($value["nome_responsavel"])->setPeriodo(unserialize($value["periodo"]))->setTelefone($value["telefone"])->
 			setCodigo($value["codigo"])->setDataCad($value["data_cad"])->setStatus($value["ativo"])->setMotivo($value["motivo_desativado"]);
 			array_push($arraycrianca,$crianca);
@@ -156,7 +156,7 @@ class CrudCrianca {
 		foreach ( $stmt->fetchAll(PDO::FETCH_ASSOC) as $value){
 			$crianca = new Crianca();
 			$crianca->setId($value["id"])->setNome($value["nome"])->setSobrenome($value["sobrenome"])->setTurma($value["turma"])->
-			setCei(unserialize($value["cei"]))->setCpf($value["cpf"])->setDataNasc($value["data_nasc"])->setEmail($value["email"])->
+			setCei(unserialize($value["cei"]))->setCpf($value["cpf"])->setDataNasc($value["data_nasc"])->setEmail($value["endereco"])->
 			setNomeResponsavel($value["nome_responsavel"])->setPeriodo(unserialize($value["periodo"]))->setTelefone($value["telefone"])->
 			setCodigo($value["codigo"])->setDataCad($value["data_cad"])->setStatus($value["ativo"]);
 			array_push($arraycrianca,$crianca);

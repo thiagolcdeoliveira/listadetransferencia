@@ -120,7 +120,7 @@ if (!empty($_POST)){
   <div class="field">
     <label>Endereço</label>
       <div class="field">
-          <input type="email"   name="email"  placeholder="Endereço" >
+          <input type="text"   name="email"  placeholder="Endereço" >
       </div>
   </div>       
   
