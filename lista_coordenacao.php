@@ -33,7 +33,7 @@ $crud = new CrudCrianca($conn, $crianca1);
 							<th>Turma Desejada</th>
 							<th>Periódo Desejada</th>
 							<th>Responsavel</th>
-							<th>Contato</th>
+							<th>Endereço</th>
 							<th>CEIs Desejados</th>
 							<th>Status</th>
 							<th>Ações</th>
@@ -50,7 +50,7 @@ $crud = new CrudCrianca($conn, $crianca1);
 							<th>Turma</th>
 							<th>Periódo</th>
 							<th>Responsavel</th>
-							<th>Contato</th>
+							<th>Endereço</th>
 							<th>CEIs Desejados</th>
 							<th>Status</th>
 							<th>Ações</th>

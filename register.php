@@ -70,7 +70,7 @@ if (!empty($_POST)){
 
 
 <form class="ui form" action="register.php" method="POST">
-<h3 class="ui dividing header">Cadastro Na Lista de Espera</h4>
+<h3 class="ui dividing header">Cadastro Na Lista de Transferência</h4>
   <div class="field">
     <label>Name</label>
     <div class="two fields">
@@ -102,61 +102,87 @@ if (!empty($_POST)){
   </div>                  
   <div class="field">
     <label>Responsavel</label>
+    <div class="two fields">     
+
       <div class="field">
         <input type="text"   name="nome_responsavel"   oninput="mascaradata(this)" 
                                         placeholder="Nome do Responsavel" required>
       </div>
+      <div class="field">
+      <div class="ui checkbox ">
+              <input type="checkbox" name="permitir[]" value="1" id="permitir"   title="Desculpa, mas se o compartilhamento dos dados não podemos adicionar a criança a lista de espera." required oninvalid="this.setCustomValidity(\'Desculpa, mas se o compartilhamento dos dados não podemos adicionar a criança a lista de espera\')">
+              <label for="permitir" >Se você (o responsavel pela criança) permite o compartilhamento dos seus dados e dos dados da criança com a Prefeitura Municpal de Araquari, marque essa opção. </label>
+            </div>
+      </div>       </div>
    
   </div>                              
 
   <div class="field">
-    <label>Contato</label>
-    <div class="two fields">
-      <div class=" field">
-          <input type="email"   name="email"  placeholder="Email do Resposnavel" >
-      </div>
+    <label>Endereço</label>
       <div class="field">
-        <input type="tel"   name="email"  placeholder="Telefone" >
+          <input type="email"   name="email"  placeholder="Endereço" >
       </div>
-    </div>  
   </div>       
   
   
   <hr class="ui dividing header"> 
 
   <div class="field" id="turma" >
-  
-      <div class=" field">
-        <label>Turma em deseja vaga*</label>
-        <div class="two fields">
-          <div class=" field">
-              <div class="ui radio checkbox">
-                <input type="radio" name="turma" value="5" id="turma1">
-                <label  for="turma1" > Berçário 1 (4 meses a 11 meses)</label>
-            </div>
-            <div class="ui radio checkbox">
-                <input type="radio" name="turma" value="1" id="turma2">
-                <label  for="turma2" > Berçário 2 (1 ano a 1 ano e 11 meses) </label>
-            </div>
-            <div class="ui radio checkbox">
-                <input type="radio" name="turma" value="2" id="turma3">
-                <label  for="turma3"> Maternal (2 anos a 2 anos e 11 meses)</label>
+    <div class="two fields">
+        <div class=" field">
+            <label>Turma em deseja vaga*</label>
+            <div class="two fields">
+              <div class=" field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="turma" value="5" id="turma1">
+                    <label  for="turma1" > Berçário 1 (4 meses a 11 meses)</label>
+                </div>
+                <div class="ui radio checkbox">
+                    <input type="radio" name="turma" value="1" id="turma2">
+                    <label  for="turma2" > Berçário 2 (1 ano a 1 ano e 11 meses) </label>
+                </div>
+                <div class="ui radio checkbox">
+                    <input type="radio" name="turma" value="2" id="turma3">
+                    <label  for="turma3"> Maternal (2 anos a 2 anos e 11 meses)</label>
+                </div>
+              </div>
+              <div class=" field">
+                <div class="ui radio checkbox">
+                    <input type="radio" name="turma" value="3" id="turma4">
+                    <label  for="turma4">Jardim ( 3 anos a 3 anos e 11 meses)</label>
+                </div>
+                <div class="ui radio checkbox">
+                    <input type="radio" name="turma" value="4" id="turma5">
+                    <label  for="turma5"> Pré  1 (4 anos a 4 anos e 11 meses)</label>
+                </div> 
+              </div> 
+              </div> 
+              </div> 
+            <div class="field">
+            <label >Período Desejado*</label>
+            <div class="ui relaxed divided list">
+              <div class="item">
+                <div class="ui checkbox ">
+                  <input type="checkbox" name="periodo[]" value="1" id="periodo1">
+                  <label for="periodo1" >Matutino</label>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui checkbox ">
+                  <input type="checkbox" name="periodo[]" value="2" id="periodo2">
+                  <label for="periodo2" >Vespertino</label>
+                </div>
+              </div>
+              <!--<div class="item">
+                <div class="ui checkbox ">
+                  <input type="checkbox" name="periodo[]" value="3" id="periodo3">
+                  <label for="periodo3">Integral</label>
+                </div>
+              </div>-->
             </div>
           </div>
-          <div class=" field">
-            <div class="ui radio checkbox">
-                <input type="radio" name="turma" value="3" id="turma4">
-                <label  for="turma4">Jardim ( 3 anos a 3 anos e 11 meses)</label>
-            </div>
-            <div class="ui radio checkbox">
-                <input type="radio" name="turma" value="4" id="turma5">
-                <label  for="turma5"> Pré  1 (4 anos a 4 anos e 11 meses)</label>
-            </div> 
-          </div> 
         </div>
-     
-     
-    </div> 
+ 
  
     
     <hr class="ui dividing header">                           
@@ -183,7 +209,7 @@ if (!empty($_POST)){
               <div class="item">
                 <div class="ui checkbox ">
                   <input type="checkbox" name="cei[]"  id="cei4"  value="3" >
-                  <label for="cei4">Bruno de Magalhães - Itinga </label>
+                  <label for="cei4">Bruno de Magalhães - Itinga (próx. Paróquia São Luiz Gonzaga) </label>
                 </div>
               </div>
               <div class="item">
@@ -256,7 +282,7 @@ if (!empty($_POST)){
                 <div class="item">
                   <div class="ui checkbox ">
                     <input type="checkbox" name="cei[]" id="cei15"  value="14">
-                    <label for="cei15">Pequeno Anjo - Rainha</label>
+                    <label for="cei15">Pequeno Anjo - Casa Nova</label>
                   </div>
                 </div>
                 <div class="item">
