@@ -11,7 +11,7 @@
 $conn = Container::getBanco();
 if (!empty($_POST)){
       if( array_key_exists('turma', $_POST ) == 1 and 
-          array_key_exists('periodo', $_POST ) == 1 and
+          //array_key_exists('periodo', $_POST ) == 1 and
            array_key_exists('cei', $_POST ) == 1  and 
            array_key_exists('nome', $_POST ) == 1  and 
            (array_key_exists('email', $_POST ) == 1  or 
@@ -25,7 +25,8 @@ if (!empty($_POST)){
           echo $data_nasc;
           $email = $_POST["email"];
           $nome_resposanvel = $_POST["nome_responsavel"];
-          $periodo = $_POST["periodo"];
+          //$periodo = $_POST["periodo"];
+          $periodo = "";
       if (!empty($nome) and !empty($sobrenome) and !empty($turma) and !empty($cei) and  !empty($cpf)) {
           $crianca1 = new Crianca;
           $crianca1->setNome($nome)->setSobrenome($sobrenome)->setTurma($turma)->setCei($cei)->
@@ -129,58 +130,62 @@ if (!empty($_POST)){
   <hr class="ui dividing header"> 
 
   <div class="field" id="turma" >
-    <div class="two fields">
-        <div class=" field">
+    <!--<div class="two fields">
+        <div class=" field">-->
             <label>Turma em deseja vaga*</label>
             <div class="two fields">
               <div class=" field">
                   <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="5" id="turma1">
-                    <label  for="turma1" > Berçário 1 (4 meses a 11 meses)</label>
+                    <label  for="turma1" > Berçário 1 (01/04/2023 a 31/03/2024)</label>
                 </div>
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="1" id="turma2">
-                    <label  for="turma2" > Berçário 2 (1 ano a 1 ano e 11 meses) </label>
+                    <label  for="turma2" > Berçário 2 (01/04/2022 a 31/03/2023) </label>
                 </div>
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="2" id="turma3">
-                    <label  for="turma3"> Maternal (2 anos a 2 anos e 11 meses)</label>
+                    <label  for="turma3"> Maternal (01/04/2021 a 31/03/2022)</label>
                 </div>
               </div>
               <div class=" field">
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="3" id="turma4">
-                    <label  for="turma4">Jardim ( 3 anos a 3 anos e 11 meses)</label>
+                    <label  for="turma4">Jardim (01/04/2020 a 31/03/2021)</label>
                 </div>
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="4" id="turma5">
-                    <label  for="turma5"> Pré  1 (4 anos a 4 anos e 11 meses)</label>
+                    <label  for="turma5"> Pré  1 (01/04/2019 a 31/03/2020)</label>
                 </div> 
-              </div> 
-              </div> 
-              </div> 
-            <div class="field">
-            <label >Período Desejado*</label>
-            <div class="ui relaxed divided list">
-              <div class="item">
-                <div class="ui checkbox ">
-                  <input type="checkbox" name="periodo[]" value="1" id="periodo1">
-                  <label for="periodo1" >Matutino</label>
+                <div class="ui radio checkbox">
+                    <input type="radio" name="turma" value="6" id="turma6">
+                    <label  for="turma6"> Pré  2 (01/04/2018 a 31/03/2019)</label>
                 </div>
-              </div>
-              <div class="item">
-                <div class="ui checkbox ">
-                  <input type="checkbox" name="periodo[]" value="2" id="periodo2">
-                  <label for="periodo2" >Vespertino</label>
+              </div> 
+             <!-- </div> 
+              </div> -->
+            <!--<div class="field">
+              <label >Período Desejado*</label>
+              <div class="ui relaxed divided list">
+                <div class="item">
+                  <div class="ui checkbox ">
+                    <input type="checkbox" name="periodo[]" value="1" id="periodo1">
+                    <label for="periodo1" >Matutino</label>
+                  </div>
                 </div>
-              </div>
+                <div class="item">
+                  <div class="ui checkbox ">
+                    <input type="checkbox" name="periodo[]" value="2" id="periodo2">
+                    <label for="periodo2" >Vespertino</label>
+                  </div>
+                </div>-->
               <!--<div class="item">
                 <div class="ui checkbox ">
                   <input type="checkbox" name="periodo[]" value="3" id="periodo3">
                   <label for="periodo3">Integral</label>
                 </div>
               </div>-->
-            </div>
+            <!--</div>-->
           </div>
         </div>
  

@@ -122,6 +122,7 @@ class CrudCrianca {
 		WHEN '3'     THEN     'Jardim'
 		WHEN '4'     THEN     'Pré 1'
 		WHEN '5'     THEN     'Berçário 1'
+		WHEN '6'     THEN     'Pré 2'
 		ELSE 'erro' END as turma
         from crianca ";
 		$stmt = $this->banco->prepare($sql);
@@ -148,6 +149,7 @@ class CrudCrianca {
 		WHEN '3'     THEN     'Jardim'
 		WHEN '4'     THEN     'Pré 1'
 		WHEN '0'     THEN     'Berçário 1'
+		WHEN '6'     THEN     'Pré 2'
 		ELSE 'erro' END as turma
         from crianca where ativo = 1 order by id";
 		$stmt = $this->banco->prepare($sql);
