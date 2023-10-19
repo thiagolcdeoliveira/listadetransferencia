@@ -185,8 +185,8 @@ if (!empty($_POST)){
                   <label for="periodo3">Integral</label>
                 </div>
               </div>-->
-            <!--</div>-->
-          </div>
+            <!--</div>
+          </div>-->
         </div>
  
  
