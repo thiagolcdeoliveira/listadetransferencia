@@ -22,7 +22,7 @@ if (!empty($_POST)){
           $cei =  $_POST["cei"];
           $cpf = $_POST["cpf"];
           $data_nasc = $_POST["data_nasc"];
-          echo $data_nasc;
+         // echo $data_nasc;
           $email = $_POST["email"];
           $nome_resposanvel = $_POST["nome_responsavel"];
           //$periodo = $_POST["periodo"];
