@@ -34,7 +34,7 @@ echo "</pre>";
 							<th>Código</th>
 							<th>Data Nasc</th>
 							<th>Turma Desejada</th>
-							<th>Periódo Desejada</th>
+						<!--	<th>Periódo Desejada</th>-->
 							<th>Responsavel</th>
 							<th>CEIs Desejados</th>
 						</tr>
@@ -46,7 +46,7 @@ echo "</pre>";
 							<th>Código</th>
 							<th>Data</th>
 							<th>Turma</th>
-							<th>Periódo</th>
+						<!--	<th>Periódo</th>-->
 							<th>Responsavel</th>
 							<th>CEIs Desejados</th>
 						</tr>
@@ -60,7 +60,7 @@ echo "</pre>";
 						    <td><?php echo $value->getCodigo()  ?></td>
 							<td><?php echo $value->getDataNasc()  ?></td>
 							<td><?php echo $value->getTurma()  ?></td>
-							<td><?php echo $value->getAllPeriodo()   ?></td>
+							<!--<td><?php // echo $value->getAllPeriodo()   ?></td>-->
 							<td><?php echo $value->getNomeResponsavelMask()   ?></td>
 							<td><?php echo $value->getAllCeis()  ?></td>
 						</tr>
