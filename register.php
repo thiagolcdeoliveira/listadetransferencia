@@ -137,29 +137,29 @@ if (!empty($_POST)){
               <div class=" field">
                   <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="5" id="turma1">
-                    <label  for="turma1" > Berçário 1 (01/04/2023 a 31/03/2024)</label>
+                    <label  for="turma1" > Berçário 1 (01/04/2024 a 31/03/2025)</label>
                 </div>
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="1" id="turma2">
-                    <label  for="turma2" > Berçário 2 (01/04/2022 a 31/03/2023) </label>
+                    <label  for="turma2" > Berçário 2 (01/04/2023 a 31/03/2024) </label>
                 </div>
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="2" id="turma3">
-                    <label  for="turma3"> Maternal (01/04/2021 a 31/03/2022)</label>
+                    <label  for="turma3"> Maternal (01/04/2022 a 31/03/2023)</label>
                 </div>
               </div>
               <div class=" field">
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="3" id="turma4">
-                    <label  for="turma4">Jardim (01/04/2020 a 31/03/2021)</label>
+                    <label  for="turma4">Jardim (01/04/2021 a 31/03/2022)</label>
                 </div>
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="4" id="turma5">
-                    <label  for="turma5"> Pré  1 (01/04/2019 a 31/03/2020)</label>
+                    <label  for="turma5"> Pré  1 (01/04/2020 a 31/03/2021)</label>
                 </div> 
                 <div class="ui radio checkbox">
                     <input type="radio" name="turma" value="6" id="turma6">
-                    <label  for="turma6"> Pré  2 (01/04/2018 a 31/03/2019)</label>
+                    <label  for="turma6"> Pré  2 (01/04/2019 a 31/03/2020)</label>
                 </div>
               </div> 
              <!-- </div> 
@@ -243,7 +243,7 @@ if (!empty($_POST)){
                 <div class="item">
                   <div class="ui checkbox ">
                     <input type="checkbox" name="cei[]"  id="cei8"  value="7">
-                    <label for="cei8" >Heley de Abreu - Itinga (próx. Escola São Benedito)</label>
+                    <label for="cei8" >Heley de Abreu - Itinga (próx. Escola Cauã)</label>
                   </div>
                 </div>
                 <div class="item">
@@ -300,7 +300,13 @@ if (!empty($_POST)){
                 <div class="item">
                   <div class="ui checkbox ">
                     <input type="checkbox" name="cei[]" id="cei17"  value="16">
-                    <label for="cei17">Professora Janaina - Itinga (próx. Escola São Benedito)</label>
+                    <label for="cei17">Professora Janaina - Itinga (próx. Escola Cauã)</label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="ui checkbox ">
+                    <input type="checkbox" name="cei[]" id="cei18"  value="17">
+                    <label for="cei18" >Marise Travasso - Itinga (próx. Escola Jablonsky)</label>
                   </div>
                 </div>
               </div>
@@ -308,12 +314,7 @@ if (!empty($_POST)){
           
           <div class="field">
             <div class="ui relaxed divided list">
-                <div class="item">
-                  <div class="ui checkbox ">
-                    <input type="checkbox" name="cei[]" id="cei18"  value="17">
-                    <label for="cei18" >Marise Travasso - Itinga (próx. Escola Jablonsky)</label>
-                  </div>
-                </div>
+                
                 <div class="item">
                   <div class="ui checkbox ">
                     <input type="checkbox" name="cei[]" id="cei19"  value="18">
@@ -332,7 +333,12 @@ if (!empty($_POST)){
                     <label for="cei21"> Vovó Maria de Lurdes Max - Icaraí (próx. IFC)</label>
                   </div>
                 </div>
-               
+                <div class="item">
+                  <div class="ui checkbox ">
+                    <input type="checkbox" name="cei[]" id="cei22" value="21" >
+                    <label for="cei22"> Andreia Alexandra Venâncio Borba (próx. Meimei)</label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

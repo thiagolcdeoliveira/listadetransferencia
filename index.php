@@ -60,7 +60,7 @@ echo "</pre>";
 						    <td><?php echo $value->getCodigo()  ?></td>
 							<td><?php echo $value->getDataNasc()  ?></td>
 							<td><?php echo $value->getTurma()  ?></td>
-							<!--<td><?php // echo $value->getAllPeriodo()   ?></td>-->
+							<!--<td><?php echo // $value->getAllPeriodo()   ?></td>-->
 							<td><?php echo $value->getNomeResponsavelMask()   ?></td>
 							<td><?php echo $value->getAllCeis()  ?></td>
 						</tr>
