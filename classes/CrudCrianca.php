@@ -124,7 +124,7 @@ class CrudCrianca {
 		WHEN '5'     THEN     'Berçário 1'
 		WHEN '6'     THEN     'Pré 2'
 		ELSE 'erro' END as turma
-        from crianca ";
+        from crianca";
 		$stmt = $this->banco->prepare($sql);
 		$stmt->execute();
 		$arraycrianca = array();

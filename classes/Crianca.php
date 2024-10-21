@@ -268,6 +268,7 @@ class Crianca implements InterfaceCrianca {
 
 	public function getAllCeis(){
 		$ceis="";
+		$cei = "Erro - Cei Indefindido";
 		foreach ($this->cei as $key => $value){
 				switch ($value) {
 					case 1:
@@ -330,6 +331,7 @@ class Crianca implements InterfaceCrianca {
 					case 21:
 						$cei =  "Andreia Alexandra Venâncio Borba";
 						break;
+				
 						
 				}
 				$ceis= $ceis." *".$cei;

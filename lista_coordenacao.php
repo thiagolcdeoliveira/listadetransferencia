@@ -58,21 +58,27 @@ $crud = new CrudCrianca($conn, $crianca1);
 					</tfoot>
 					<tbody>
 					<?php if  (isset($_SESSION['u'])){ ?>		
-					<?php foreach ($crud->list() as $key => $value){   ?>
+					<?php 
+						$trocar_esse = array(" ", " ", "","","","","");
+						$trocar_por = array("<", ">", "INSERT","DELETE", "DROP", "SELECT");
+						
+						foreach ($crud->list() as $key => $value){   ?>
 						<tr>
 						    <td><?php echo $value->getId() ?> </td>
-							<td><?php echo $value->getDataCad()  ?></td>
-							<td><?php echo $value->getCodigo()  ?></td>
-						    <td><?php echo $value->getNome()." ".$value->getSobrenome()  ?></td>
-							<td><?php echo $value->getDataNasc()  ?></td>
-							<td><?php echo $value->getTurma()  ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getDataCad()  )   ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getCodigo()  )   ?></td>
+						    <td><?php echo str_replace($trocar_por, $trocar_esse, $value->getNome()." ".$value->getSobrenome()  )   ?></td>
+							<td><?php echo  str_replace($trocar_por, $trocar_esse, $value->getDataNasc() )   ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getTurma() );?></td>
 							<!--<td><?php // echo $value->getAllPeriodo()   ?></td>-->
-							<td><?php echo $value->getNomeResponsavel()   ?></td>
-							<td><?php echo $value->getTelefone()   ?>  <?php echo $value->getEmail()   ?>   </td>
-							<td><?php echo $value->getAllCeis()  ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getNomeResponsavel() );?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse,  $value->getTelefone()  );?>
+							<?php echo str_replace($trocar_por, $trocar_esse,  $value->getEmail() );?>
+							 </td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getAllCeis() )    ?></td>
 							<!--<td><?php //echo if($value->getStatus()){  ?>-->
 								<td><?php  if($value->getStatus()==0){  ?>
-									<?php echo $value->getMotivo()  ?>
+									<?php echo str_replace($trocar_por, $trocar_esse,  $value->getMotivo() )  ?>
 								
 								<?php } else{?>
 									Ativo 

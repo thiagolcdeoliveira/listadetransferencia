@@ -53,16 +53,21 @@ echo "</pre>";
 					</tfoot>
 					<tbody>
 						
-					<?php foreach ($crud->listAtivos() as $key => $value){   ?>
+					<?php 
+						$trocar_esse = array(" ", " ", "","","","","");
+						$trocar_por = array("<", ">", "INSERT","DELETE", "DROP", "SELECT");
+					
+					foreach ($crud->listAtivos() as $key => $value){   ?>
 						<tr>
-						   
-						    <td><?php echo $value->getDataCad()  ?></td>
-						    <td><?php echo $value->getCodigo()  ?></td>
-							<td><?php echo $value->getDataNasc()  ?></td>
-							<td><?php echo $value->getTurma()  ?></td>
-							<!--<td><?php echo // $value->getAllPeriodo()   ?></td>-->
-							<td><?php echo $value->getNomeResponsavelMask()   ?></td>
-							<td><?php echo $value->getAllCeis()  ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getDataCad()  )   ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getCodigo()  )   ?></td>
+							<td><?php echo  str_replace($trocar_por, $trocar_esse, $value->getDataNasc() )   ?></td>
+							<td><?php echo str_replace($trocar_por, $trocar_esse, $value->getTurma() );?></td>
+
+							<!--<td><?php //echo // $value->getAllPeriodo()   ?></td>-->
+							<td><?php 	echo str_replace($trocar_por, $trocar_esse, $value->getNomeResponsavelMask()  );?></td>
+    
+							<td><?php echo  str_replace($trocar_por, $trocar_esse,  $value->getAllCeis() )  ?></td>
 						</tr>
 
 						<?php  } ?>
